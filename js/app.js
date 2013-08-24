@@ -3,7 +3,8 @@ var S21 = {};
 
 S21 = {
     opt: {
-        debugEl: $('#debug')
+        debugEl: $('#debug'),
+        canvasEl: $('#canvas'),
     },
     /**
      * Get the data
@@ -14,9 +15,6 @@ S21 = {
         //$.get('http://www.sul21.com.br/jornal/feed/', function (data) {
         $.get('http://www.fititnt.org/p.php?url=http://www.sul21.com.br/jornal/feed/', function (data) {
             var finalResult = {}, i = 0;
-            //console.log(data);
-            //console.log($(data).find("channel"));
-            //data.replace('', '');
             var result = $(data).find("item").each(function () { // or "item" or whatever suits your feed
                 var el = $(this);
                 finalResult[i] = {
@@ -28,7 +26,6 @@ S21 = {
 
                 i = i + 1;
             });
-            //cb($(data));
             cb(finalResult);
         });
     },
@@ -36,15 +33,15 @@ S21 = {
         var html = '';
         $.each(data, function(item, value) {
             html += '<article>';
-            html += '<h1>' + value.title + '</h1>';
-            html += '<ul><li>';
+            html += '<h1 onclick=\'$("#item-' + item + '").toggle();\'>' + value.title + '</h1>';
+            html += '<ul style="display:none" id="item-' + item + '"><li>';
             html += '<p>' + value.text + '</p>';
-            html += '<p><a href="' + value.link + ' target="_blank">Ver no site<a></p>';
+            html += '<p><a href="' + value.link + '" target="_blank">Ver no site<a></p>';
             html += '</li></ul>';
             html += '</article>';
         });
-        console.log(html);
-        S21.opt.debugEl[0].innerHTML = html; //JSON.stringify(data);
+        //console.log(html);
+        S21.opt.canvasEl[0].innerHTML = html; //JSON.stringify(data);
     }
 
 }
