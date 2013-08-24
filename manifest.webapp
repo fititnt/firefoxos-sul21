@@ -1,0 +1,15 @@
+{
+    "name": "Sul21",
+    "description": "App de teste",
+    "launch_path": "index.html",
+    "developer": {
+        "name": "Emerson Rocha Luiz & Morvana Bonin",
+        "url": "https://github.com/fititnt/firefoxos-sul21/"
+    },
+    "icons": {
+        "16": "img/icon-16.png",
+        "48": "img/icon-48.png",
+        "128": "img/icon-128.png"
+    },
+    "default_locale": "pt"
+}
