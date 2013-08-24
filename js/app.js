@@ -44,7 +44,7 @@ S21 = {
             html += '</article>';
         });
         console.log(html);
-        //S21.opt.debugEl[0].innerHTML = html; //JSON.stringify(data);
+        S21.opt.debugEl[0].innerHTML = html; //JSON.stringify(data);
     }
 
 }
