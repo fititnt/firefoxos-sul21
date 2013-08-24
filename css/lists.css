@@ -136,7 +136,7 @@
 
 /* Text content */
 [data-type="list"] li p {
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   overflow: hidden;
   text-overflow: ellipsis;
   border: none;
@@ -149,7 +149,8 @@
 
 [data-type="list"] li p:first-of-type {
   font-size: 1.8rem;
-  line-height: 2.2rem;
+  /*line-height: 2.2rem;*/
+  line-height: 1rem;
   color: #000;
   padding: 1rem 0 0;
 }

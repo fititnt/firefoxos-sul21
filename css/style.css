@@ -2,8 +2,14 @@ h1 {
 	margin: 0;
     padding: 0;
     font-size: 14px !important ;
+    text-transform: none !important ;
+    padding: 0.2rem 1rem !important ;	
 }
 
 p {
 	font-size: 12px !important;
+}
+
+[data-type="list"] ul {
+	/*padding-bottom: 1em;*/
 }
